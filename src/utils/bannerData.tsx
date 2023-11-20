@@ -118,7 +118,7 @@ export const CatfruitBannerData: BannerData = {
     },
     {
       rate: 600,
-      units: ["宝物雷达", "500K XP", "史诗猫薄荷"],
+      units: ["宝物雷达", "500K XP", "彩虹猫薄荷"],
       reroll: false,
     },
   ],
