@@ -77,24 +77,19 @@ const FinderResults = ({
             Notes:
             <ul>
               <li>
-                If there are multiple seeds found, only one will be correct, you
-                can pull some more and check the tracks to confirm which one it
-                is.
+                如果有多个找到了种子，只有一个是正确的。您可以多抽几次，用于验证哪一个种子是正确的。
               </li>
               <li>
-                It's also possible that none of the seeds are correct due to a
-                dupe.
+                也有可能因为输入了错误的序列导致无结果
                 <ul>
                   <li>
-                    In that case you can just remove the first cat and try
-                    again.
+                    出现这种情况请检查序列并重新输入
                   </li>
                 </ul>
               </li>
             </ul>
             <br />
-            Found a total of {seedsFound.length} seed
-            {seedsFound.length > 1 && "s"} matching your rolls.{" "}
+            共计发现{seedsFound.length}个满足您输入序列的种子。{" "}
           </Typography>
           <UlWithStrong>
             {seedsFound.map((seed, i) => {
@@ -105,11 +100,11 @@ const FinderResults = ({
                   <strong>Seed {i + 1}</strong>
                   <ul>
                     <li>
-                      <strong>Before</strong> doing the {numPulls} pulls:{" "}
+                      <strong>包含</strong>输入的{numPulls}抽序列:{" "}
                       <a href={getTrackUrlWithSeedQueryParam(seed)}>{seed}</a>
                     </li>
                     <li>
-                      <strong>After</strong> doing the {numPulls} pulls:{" "}
+                      <strong>不包含</strong>输入的{numPulls}抽序列:{" "}
                       <a href={getTrackUrlWithSeedQueryParam(seedAfterRolls)}>
                         {seedAfterRolls}
                       </a>
@@ -139,8 +134,7 @@ const FinderResults = ({
         </>
       ) : (
         <Typography variant="body1">
-          Couldn't find your seed. This could be because of a dupe - please
-          remove the first cat and try again.
+          无法搜索到种子，请检查输入的序列是否正确。
         </Typography>
       )}
     </div>

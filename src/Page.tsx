@@ -15,32 +15,30 @@ const Page = () => {
       <Typography variant="h4">
         BC Normal Seed Tracker <a href="#credits">[Credits]</a>
       </Typography>
-      <Typography variant="h6">About this tool</Typography>
+      <Typography variant="h6">使用说明</Typography>
       <ul>
         <li>
-          The{" "}
+          {" "}
           <strong>
-            normal gacha does NOT share a seed with the rare gacha.
+            银票池子的种子和金票等稀有池子不共享。
           </strong>{" "}
-          You'll need to find your seed separately.
+          银票池子的种子需要重新获取。
         </li>
         <ul>
           <li>
-            Looking for your seed? Try <a href="#/finder">here</a>.
+            点击<a href="#/finder">这里</a>获取银票池种子.
           </li>
         </ul>
         <li>
-          Track switches work the exact same as rare banners. You can
-          strategically roll to hit or avoid a track switch.
+          可以通过点击banner来选取不同的池子，可以通过切换池子来规避换线。
         </li>
         <li>
-          Clicking an <strong>unit name</strong> will update your seed. Clicking{" "}
-          <strong>anywhere else in a cell</strong> will highlight your next 10
-          rolls.
+          点击<strong>蓝色物品文字</strong>会更新种子。 点击{" "}
+          <strong>格子内其他位置</strong>则会高亮10连抽的物品。
         </li>
       </ul>
-      <Typography variant="h6">Controls</Typography>
-      <Typography variant="subtitle2">Current seed</Typography>
+      <Typography variant="h6">控制</Typography>
+      <Typography variant="subtitle2">当前种子</Typography>
       <div style={{ marginBottom: "4px" }}>
         <input
           type="text"
@@ -54,10 +52,10 @@ const Page = () => {
             setQueryParam("seed", seedInput);
           }}
         >
-          Update
+          刷新
         </button>
       </div>
-      <Typography variant="subtitle2">Rolls</Typography>
+      <Typography variant="subtitle2">数量选择</Typography>
       <div style={{ marginBottom: "4px" }}>
         <select
           style={{ marginRight: "4px" }}

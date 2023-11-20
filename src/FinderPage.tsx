@@ -102,25 +102,21 @@ const FinderPage = () => {
       <Typography variant="body1">
         <ul style={{ marginTop: 0 }}>
           <li>
-            This tool will find your normal seed by looking for a seed that
-            matches the rolls you input.
+            输入抽卡序列，获取银票种子
           </li>
           <li>
-            The searching is done <strong>within the browser</strong>, meaning
-            that it will consume your device's resources.
+            搜索结束后结果<strong>显示在浏览器上</strong>，搜索会使用您的浏览器和计算机的计算资源.
             <ul>
               <li>
-                You should expect some heavy device slowdown while the search is
-                running.
+                搜索时尽量减少您的计算机的计算压力与浏览器页面数，防止计算失败。
               </li>
             </ul>
           </li>
           <li>
-            Similar to rare ticket tracking, 8-10 rolls is required for a
-            reliable result.
+            和金票池子类似，使用8-10抽的结果来搜索会获取比较可靠的结果。
           </li>
           <li>
-            Looking for the actual tracker? Try <a href="#">here</a>.
+            点击<a href="#">这里</a>查看卡池序列.
           </li>
         </ul>
       </Typography>
@@ -134,9 +130,9 @@ const FinderPage = () => {
             setUserRolls(Array(10).fill(null));
           }}
         >
-          <option value="normal">Normal Capsules</option>
+          <option value="normal">普通</option>
           <option value="normalPlus">
-            Normal Capsules+ (with Superfeline)
+            普通+（含猫咪超人）
           </option>
         </select>
       </div>
@@ -171,17 +167,17 @@ const FinderPage = () => {
           );
         })}
       </div>
-      <Typography variant="subtitle2">Start</Typography>
+      <Typography variant="subtitle2">搜索</Typography>
       <button
         type="button"
         onClick={onClick}
         disabled={userRolls.every((roll) => roll === null) || isSearching}
       >
-        Start searching
+        开始搜索
       </button>
       {(isSearching || startedAndFinishedSearching) && (
         <>
-          <Typography variant="h6">Results</Typography>
+          <Typography variant="h6">搜索结果</Typography>
           <FinderResults
             workerProgresses={progresses}
             seedsFound={seedsFound}
